@@ -1,0 +1,13 @@
+[package]
+name = "polyp"
+version = "0.1.0"
+authors = ["Aramis Razzaghipour <aramisnoah@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "An experiment inspired by https://matklad.github.io/2019/11/16/a-better-shell.html"
+documentation = "https://docs.rs/polyp"
+homepage = "https://github.com/arzg/polyp"
+repository = "https://github.com/arzg/polyp"
+readme = "README.md"
+
+[dependencies]
