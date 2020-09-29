@@ -11,3 +11,4 @@ repository = "https://github.com/arzg/polyp"
 version = "0.1.0"
 
 [dependencies]
+serde = {version = "1", features = ["derive"]}
