@@ -2,6 +2,11 @@ use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 
 #[derive(Debug, Serialize, Deserialize)]
+pub enum ClientMsg {
+    PressedKey(char),
+}
+
+#[derive(Debug, Serialize, Deserialize)]
 pub enum ServerMsg {
     NewText(String),
 }
