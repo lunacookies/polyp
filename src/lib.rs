@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub enum ClientMsg {
+pub enum UserInput {
     PressedKey(char),
 }
 
