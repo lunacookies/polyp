@@ -13,7 +13,8 @@ pub enum ServerMsg {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum ProcessletMsg {
-    NewOutput(Value),
+    Value(Value),
+    TextField { current_text: String },
 }
 
 #[derive(Debug, Serialize, Deserialize)]
