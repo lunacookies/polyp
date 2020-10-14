@@ -24,7 +24,10 @@ pub enum ServerMsg {
 #[derive(Debug, Serialize, Deserialize)]
 pub enum Ui {
     Value(Value),
-    TextField { current_text: String },
+    TextField {
+        current_text: String,
+        cursor_idx: usize,
+    },
 }
 
 #[derive(Debug, Serialize, Deserialize)]
