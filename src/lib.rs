@@ -3,7 +3,17 @@ use std::path::PathBuf;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum UserInput {
-    PressedKey(char),
+    PressedKey(Key),
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub enum Key {
+    Char(char),
+    Backspace,
+    Up,
+    Down,
+    Left,
+    Right,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
