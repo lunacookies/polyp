@@ -8,7 +8,7 @@ license = "MIT OR Apache-2.0"
 name = "polyp"
 readme = "README.md"
 repository = "https://github.com/arzg/polyp"
-version = "0.5.1"
+version = "0.6.0"
 
 [dependencies]
 serde = {version = "1", features = ["derive"]}
