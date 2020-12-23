@@ -6,11 +6,13 @@ pub mod protocol;
 #[derive(Debug, Serialize, Deserialize)]
 pub enum ServerMsg {
     UserInput(UserInput),
+    Shutdown,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum ProcessletMsg {
     UserInput(UserInput),
+    Shutdown,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
