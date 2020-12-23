@@ -12,10 +12,10 @@ impl<Source: BufRead, Sink: Write> Connection<Source, Sink> {
     }
 }
 
-impl Connection<BufReader<ChildStdout>, ChildStdin> {
-    pub fn new_from_child(child: Child) -> Option<Self> {
-        let stdin = child.stdin?;
-        let stdout = child.stdout?;
+impl<'a> Connection<BufReader<&'a mut ChildStdout>, &'a mut ChildStdin> {
+    pub fn new_from_child(child: &'a mut Child) -> Option<Self> {
+        let stdin = child.stdin.as_mut()?;
+        let stdout = child.stdout.as_mut()?;
 
         Some(Self {
             source: BufReader::new(stdout),
