@@ -4,12 +4,17 @@ use std::path::PathBuf;
 pub mod protocol;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub enum UserInput {
-    PressedKey(Key),
+pub enum ServerMsg {
+    UserInput(UserInput),
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum ProcessletMsg {
+    UserInput(UserInput),
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub enum UserInput {
     PressedKey(Key),
 }
 
@@ -21,11 +26,6 @@ pub enum Key {
     Down,
     Left,
     Right,
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-pub enum ServerMsg {
-    NewText(String),
 }
 
 #[derive(Debug, Serialize, Deserialize)]
