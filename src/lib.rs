@@ -4,6 +4,11 @@ use std::path::PathBuf;
 pub mod protocol;
 
 #[derive(Debug, Serialize, Deserialize)]
+pub enum UserInput {
+    PressedKey(Key),
+}
+
+#[derive(Debug, Serialize, Deserialize)]
 pub enum ProcessletMsg {
     PressedKey(Key),
 }
